@@ -10,8 +10,6 @@ export default function AppProvider({children}){
             return items.id === id;
         });
 
-        console.log('checkItemOnList', checkItemOnList)
-
         if(checkItemOnList !== undefined){
             const findItem = cartItems.find((items) => {
                 return items.id === id;
@@ -20,19 +18,12 @@ export default function AppProvider({children}){
             if (findItem.quantity !== undefined){
                 quantity = quantity + findItem.quantity;
             }
-
-            console.log('quantity', quantity)
-            console.log('findItem.quantity', findItem.quantity)
             
             const filteredItems = cartItems.filter((items) => {
                 return items.id !== id;
             })
             
-            console.log('filteredItems', filteredItems)
-
             setCartItems([...filteredItems, {id, title, image, price, quantity}]);
-
-            console.log('cartItems', cartItems)
         } else {
             setCartItems(prevState => [...prevState, {id, title, image, price, quantity}]);
         }

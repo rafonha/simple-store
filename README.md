@@ -31,7 +31,7 @@ This is a simple project of a e-commerce.
 
 * For testing, a physical or virtual (emulator) device is needed. 
 
-### Installation
+### Installation and run app
 
 1. Clone the repo
    ```sh
@@ -40,6 +40,10 @@ This is a simple project of a e-commerce.
 2. Install NPM packages
    ```sh
    npm install
+   ```
+3. Run Expo
+   ```sh
+   npx expo start
    ```
 
 
