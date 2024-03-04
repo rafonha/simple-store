@@ -1,8 +1,7 @@
 import { useContext } from 'react'
-import { ScrollView } from 'react-native'
 import { AppContext } from '../../contexts/context'
 import ShoppingCartItem from '../shopping-cart-item/ShoppingCartItem';
-import { ButtonText, NoItemContainer, NoItemText, StoreButton } from './ShoppingCartList.style';
+import { ButtonText, NoItemContainer, NoItemText, ShoppingCartListContainer, StoreButton } from './ShoppingCartList.style';
 import { Link } from 'expo-router';
 
 export default function ShoppingCartList() {
@@ -13,7 +12,7 @@ export default function ShoppingCartList() {
   })
 
   return (
-    <ScrollView>
+    <ShoppingCartListContainer>
       {cartItems.length != 0 ? renderCartItems : 
       <NoItemContainer>
         <NoItemText>No items to show, add some items to shopping cart.</NoItemText>
@@ -23,6 +22,6 @@ export default function ShoppingCartList() {
           </StoreButton>
         </Link>
       </NoItemContainer>}
-    </ScrollView>
+    </ShoppingCartListContainer>
   )
 }

@@ -20,3 +20,7 @@ export const ButtonText = styled.Text`
     color: white;
     font-weight: 700;
 `;
+
+export const ShoppingCartListContainer = styled.ScrollView`
+    margin-bottom: 80px;
+`;

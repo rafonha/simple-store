@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
-import { ScrollView } from 'react-native'
 import ShoppingListItem from '../shopping-list-item/ShoppingListItem'
+import { ShoppingListContainer } from './ShoppingList.style'
 
 export default function ShoppingList() {
   const [data, setData] = useState([])
@@ -22,8 +22,8 @@ export default function ShoppingList() {
   })
 
   return (
-    <ScrollView>
+    <ShoppingListContainer>
       {renderItems}
-    </ScrollView>
+    </ShoppingListContainer>
   )
 }
