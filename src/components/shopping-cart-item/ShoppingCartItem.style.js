@@ -1,11 +1,10 @@
 import styled from 'styled-components/native';
 
 export const ItemContainer = styled.View`
-    margin: 10px;
     padding: 10px;
-    border: 1px solid black;
-    border-radius: 10px;
+    border: 1px solid lightgray;
     background-color: white; 
+    margin-bottom: 5px;
 `;
 
 export const DescriptionContainer = styled.View`
@@ -16,12 +15,12 @@ export const ItemImageContainer = styled.View`
     display: flex;
     justify-content: center;
     width: 100%;
-    max-width: 30%;
+    max-width: 20%;
 `;
 
 export const ItemImage = styled.Image`
-    max-width: 80px;
-    height: 80px;
+    max-width: 60px;
+    height: 60px;
 `;
 
 export const TextDescriptionContainer = styled.View`
@@ -29,6 +28,20 @@ export const TextDescriptionContainer = styled.View`
     max-width: 70%;
 `;
 
-export const ItemText = styled.Text`
+export const ItemTitle = styled.Text`
     padding: 5px;
+    font-size: 18px;
+`;
+
+export const ItemPrice = styled.Text`
+    padding: 5px;
+`;
+
+export const ItemQuantity = styled.Text`
+    padding: 5px;
+`;
+
+export const ItemTotal = styled.Text`
+    padding: 5px;
+    font-size: 17px;
 `;

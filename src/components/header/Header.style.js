@@ -11,7 +11,7 @@ export const HeaderContainer = styled.View`
 `;
 
 export const HeaderButton = styled.TouchableOpacity`
-    background-color: #3291a8;
+    border: 1px solid #3291a8;
     width: 40%;
     padding: 10px;
     margin: 10px;
@@ -19,7 +19,7 @@ export const HeaderButton = styled.TouchableOpacity`
 `;
 
 export const ButtonText = styled.Text`
-    color: white;
+    color: #3291a8;
     font-weight: 700;
 `;
 

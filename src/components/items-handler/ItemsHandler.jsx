@@ -5,12 +5,13 @@ import {
   AddToCartButton, 
   AddToCartContainer, 
   AddToCartText, 
-  ItemsCountInput, 
-  MinusButton, 
-  PlusButton,
   DeleteButtonContainer,
   DeleteButton,
-  DeleteButtonText
+  DeleteButtonText,
+  PlusMinusButton,
+  PlusMinusButtonText,
+  HandleQntContainer,
+  ItemsCount
 } from './ItemsHandler.style';
 import { useRouter } from "expo-router";
 
@@ -19,18 +20,6 @@ export default function ItemsHandler({ data, buttonText }) {
     const [itemsCount, setItemsCount] = useState(1);
     const { addItemToCart, removeItemFromCart } = useContext(AppContext);
     const router = useRouter();
-
-    useEffect(() => {
-      handleQuantity()
-    }, [])
-
-    const handleQuantity = () => {
-      if(buttonText === 'Update quantity'){
-        return data.quantity !== undefined ? data.quantity.toString() : itemsCount.toString();
-      } else {
-        return itemsCount.toString();
-      }
-    }
   
     const increaseItem = () => {
         if (itemsCount <= 9){
@@ -74,12 +63,18 @@ export default function ItemsHandler({ data, buttonText }) {
     <>
       {buttonText !== 'Update quantity' &&
       <AddToCartContainer>
-          <MinusButton title='-' onPress={decreaseItem} />
-          <ItemsCountInput keyboardType = 'numeric' value={handleQuantity()} />
-          <PlusButton title='+' onPress={increaseItem} />
-          <AddToCartButton onPress={addItem}>
-              <AddToCartText>{buttonText}</AddToCartText>
-          </AddToCartButton>
+        <HandleQntContainer>
+          <PlusMinusButton onPress={decreaseItem}>
+            <PlusMinusButtonText>-</PlusMinusButtonText>
+          </PlusMinusButton>
+          <ItemsCount>{itemsCount.toString()}</ItemsCount>
+          <PlusMinusButton onPress={increaseItem}>
+            <PlusMinusButtonText>+</PlusMinusButtonText>
+          </PlusMinusButton>
+        </HandleQntContainer>
+        <AddToCartButton onPress={addItem}>
+            <AddToCartText>{buttonText}</AddToCartText>
+        </AddToCartButton>
       </AddToCartContainer>
       }
       {buttonText === 'Update quantity' && 

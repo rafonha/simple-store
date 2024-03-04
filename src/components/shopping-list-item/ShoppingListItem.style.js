@@ -1,11 +1,11 @@
 import styled from 'styled-components/native';
+import ReadMore from '@fawazahmed/react-native-read-more';
 
 export const ItemContainer = styled.View`
-    margin: 10px;
     padding: 10px;
-    border: 1px solid black;
-    border-radius: 10px;
+    border: 1px solid lightgray;
     background-color: white; 
+    margin-bottom: 5px;
 `;
 
 export const DescriptionContainer = styled.View`
@@ -29,6 +29,19 @@ export const TextDescriptionContainer = styled.View`
     max-width: 70%;
 `;
 
-export const ItemText = styled.Text`
+export const ItemTitle = styled.Text`
     padding: 5px;
+    font-size: 18px;
+`;
+
+export const ItemPrice = styled.Text`
+    padding: 5px;
+`;
+
+export const ItemDescription = styled(ReadMore)`
+    padding-left: 5px;
+`;
+
+export const ItemRateContainer = styled.View`
+    max-width: 50%;
 `;
