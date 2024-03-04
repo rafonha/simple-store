@@ -12,7 +12,6 @@ import {
   DeleteButton,
   DeleteButtonText
 } from './ItemsHandler.style';
-import { formatPrice } from '../../services/FormatPrice';
 import { useRouter } from "expo-router";
 
 
@@ -47,7 +46,7 @@ export default function ItemsHandler({ data, buttonText }) {
   
     const addItem = () => {
       successAlert();
-      addItemToCart(data.id, data.title, data.image, formatPrice(data.price), itemsCount);
+      addItemToCart(data.id, data.title, data.image, data.price, itemsCount);
     }
 
     const successAlert = () =>
