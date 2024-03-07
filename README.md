@@ -6,7 +6,7 @@
 
 [![Product Name Screen Shot][product-screenshot]]
 
-This is a simple project of a e-commerce. 
+This is a simple project of a e-commerce. I've considered the size of the project and decided to do a simple app using Expo, where I used it's features of routes, building and icons to build the app. Moreover, I've decided to use Context to manage global state instead of Redux (or any other more powerful state manager) because there are not many global states used in this project. 
 
 ### Built With
 
@@ -57,10 +57,11 @@ The main purpose of this project is to learn how to use Fake Store API mocking a
 
 ## Future Improvements
 
+- [x] Make rating with icon (stars)
+- [x] Update product description and add "see more" button when long description
 - [ ] Add feature to update cart quantity
 - [ ] Add total of cart
 - [ ] Add badge to shopping cart button with quantity of items
-- [ ] Make rating with icon (stars)
 - [ ] Create unit tests
 - [ ] Improve accessibility and design
 - [ ] Create design systems
